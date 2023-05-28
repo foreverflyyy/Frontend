@@ -3,6 +3,8 @@ import './styles/App.css';
 import PostList from './components/PostList';
 import PostForm from './components/PostForm';
 import PostFilter from './components/PostFilter';
+import MyModal from './components/UI/modal/MyModal';
+import MyButton from './components/UI/button/MyButton';
 
 export default function App() {
 
@@ -11,6 +13,8 @@ export default function App() {
     { id: 2, title: 'c#', description: 'good' },
     { id: 3, title: 'python', description: 'fine' },
   ]);
+
+  const [modalVisible, setModalVisible] = useState(false);
 
   const [filter, setFilter] = useState({
     query: '',
@@ -30,6 +34,7 @@ export default function App() {
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost]);
+    setModalVisible(false);
   }
 
   const removePost = (removedPost) => {
@@ -38,8 +43,12 @@ export default function App() {
 
   return (
     <div className="App">
-      <PostForm create={createPost} />
-      <hr style={{ margin: '15px 0' }}></hr>
+      <MyButton style={{marginTop: '30px'}} onClick={() => setModalVisible(true)}>
+        Create post
+      </MyButton>
+      <MyModal visible={modalVisible} setVisible={(value) => setModalVisible(value)}>
+        <PostForm create={createPost} />
+      </MyModal>
       <PostFilter filter={filter} setFilter={setFilter}/>
       <PostList remove={removePost} posts={sortedAndSearchedPosts} title='List posts:' />
     </div>
