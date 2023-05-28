@@ -1,17 +1,20 @@
 import React from 'react'
 import '../styles/App.css';
+import MyButton from './UI/button/MyButton';
 
-export default function Post({post}) {
+export default function Post({remove, number, post}) {
 
     return (
         <div className = "post">
             <div className='post_content'>
-                <strong>{post.id}. {post.title}</strong>
+                <strong>{number}. {post.title}</strong>
                 <div>
                     {post.description}
                 </div>
             </div>
-            <button>Удалить</button>
+            <MyButton onClick={() => remove(post)}>
+                Удалить
+            </MyButton>
         </div>
     )
 }
