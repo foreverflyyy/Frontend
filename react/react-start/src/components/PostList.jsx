@@ -3,7 +3,7 @@ import PostItem from './PostItem'
 import '../styles/App.css'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
-export default function PostList({remove, posts, title}) {
+export default function PostList({remove, openPost, posts, title}) {
 
     if(!posts.length){
         return (
@@ -25,7 +25,7 @@ export default function PostList({remove, posts, title}) {
                     timeout={500}
                     classNames="post"
                 >
-                    <PostItem remove={remove} post={post}/>
+                    <PostItem remove={remove} openPost={openPost} post={post}/>
                 </CSSTransition>
             )}
         </TransitionGroup>
