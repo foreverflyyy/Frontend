@@ -1,20 +1,30 @@
-import { IUserState, UserAction, UserActionsTypes } from "../../types/user"
+import { PayloadAction, createSlice } from "@reduxjs/toolkit"
+import { IUser, IUserState } from "../../models/IUser";
+import { fetchUsers } from "./ActionCreators";
 
-const defaultState : IUserState = {
+const defaultUserState: IUserState = {
     users: [],
-    loading: false,
-    error: null
+    isLoading: false,
+    error: ''
 }
 
-export const userReducer = (state : IUserState = defaultState, action : UserAction) : IUserState => {
-  switch(action.type) {
-    case UserActionsTypes.FETCH_USERS:
-        return {...state, loading : true} 
-    case UserActionsTypes.FETCH_USERS_SUCCESS: 
-        return {...state, loading: false, users: state.users}
-    case UserActionsTypes.FETCH_USERS_ERROR: 
-        return {...state, loading: false, error: action.payload}
-    default: 
-        return state;
-  }
-}
+export const userSlice = createSlice({
+    name: 'user',
+    initialState: defaultUserState,
+    reducers: {},
+    extraReducers: {
+        [fetchUsers.fulfilled.type]: (state, action: PayloadAction<IUser[]>) => {
+            state.isLoading = false;
+            state.users = action.payload;
+        },
+        [fetchUsers.pending.type]: (state) => {
+            state.isLoading = true;
+        },
+        [fetchUsers.rejected.type]: (state, action: PayloadAction<string>) => {
+            state.isLoading = false;
+            state.error = action.payload;
+        }
+    }
+});
+
+export default userSlice.reducer;

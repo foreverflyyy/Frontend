@@ -1,9 +1,15 @@
-import React from 'react'
-import { useTypedSelector } from '../hooks/useTypedSelector'
+import React, { useEffect }from 'react'
+import { useAppSelector } from '../hooks/redux'
+import { useAppDispatch } from '../hooks/redux'
 
-export const UserList = () => {
+export const UserList: React.FC = () => {
 
-    const {users, loading, error} = useTypedSelector(state => state.user);
+  const {} = useAppSelector(state => state.user)
+  const {} = useAppDispatch();
+
+  useEffect(() => {
+    
+  }, []);
 
   return (
     <div>UserList</div>
