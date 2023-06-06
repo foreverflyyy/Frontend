@@ -11,9 +11,10 @@ export const Navbar = () => {
             {isAuth
                 ?
                 <div className="navbar-pages">
-                    <Link to='/'>Home</Link>
-                    <Link to='/posts'>Posts</Link>
-                    <Link to='/out'>Sign out</Link>
+                    <Link to='/' className='navbarLinks'>Home</Link>
+                    <Link to='/posts' className='navbarLinks'>Posts</Link>
+                    <Link to='/todo' className='navbarLinks'>Todo</Link>
+                    <Link to='/out' className='navbarLinks out'>Sign out</Link>
                 </div>
                 :
                 <div className="navbar-text"> Enter in system! </div>

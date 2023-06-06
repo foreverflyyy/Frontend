@@ -1,7 +1,7 @@
 .navbar {
-    height: 60px;
+    height: 50px;
     background-color: #282c34;
-    width: 100%;
+    width: 100vw;
     color: white;
     font-size: 20px;
 }
@@ -9,11 +9,27 @@
 .navbar-pages {
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
 }
 
 .navbar-text {
     display: flex;
     justify-content: center;
+}
+
+.navbarLinks {
+    padding-left: 15px;
+    color: #8d8d8d;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.navbarLinks:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.out {
+    padding-left: 50px;
 }

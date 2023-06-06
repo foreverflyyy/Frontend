@@ -3,7 +3,7 @@ import {IPost} from '../models/IPost';
 
 export const postApi = createApi({
     reducerPath: 'postApi',
-    baseQuery: fetchBaseQuery({baseUrl: 'https://jsonplaceholder.typicode.com/posts'}),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://jsonplaceholder.typicode.com'}),
     tagTypes: ['Post'],
     endpoints: (builder) => ({
         getPosts: builder.query<IPost[], number>({
@@ -17,4 +17,4 @@ export const postApi = createApi({
     }),
 })
 
-export const {useGetPostsQuery} = postApi;
+export const {useLazyGetPostsQuery, useGetPostsQuery} = postApi;
