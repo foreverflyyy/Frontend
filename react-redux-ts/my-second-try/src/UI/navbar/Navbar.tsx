@@ -8,17 +8,21 @@ export const Navbar = () => {
 
     return (
         <div className="navbar">
-            {isAuth
-                ?
-                <div className="navbar-pages">
-                    <Link to='/' className='navbarLinks'>Home</Link>
-                    <Link to='/posts' className='navbarLinks'>Posts</Link>
-                    <Link to='/todo' className='navbarLinks'>Todo</Link>
-                    <Link to='/out' className='navbarLinks out'>Sign out</Link>
-                </div>
-                :
-                <div className="navbar-text"> Enter in system! </div>
-            }
+            <div className="navbar-container">
+                {isAuth
+                    ?
+                    <div className='navbar-pages'>
+                        <div className='navbar-main-pages'>
+                            <Link to='/' className='navbar-links'>Home</Link>
+                            <Link to='/posts' className='navbar-links'>Posts</Link>
+                            <Link to='/todo' className='navbar-links'>Todo</Link>
+                        </div>
+                        <Link to='/out' className='navbar-links navbar-link-out'>Sign out</Link>
+                    </div>
+                    :
+                    <div className="navbar-text navbar-container"> Enter in system! </div>
+                }
+            </div>
         </div>
     )
 }

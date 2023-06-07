@@ -1,0 +1,9 @@
+$fz: 100px;
+
+.input {
+  font-size: 20px;
+
+  .input-less {
+    font-size: $fz;
+  }
+}

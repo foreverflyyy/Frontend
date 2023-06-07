@@ -1,0 +1,99 @@
+.posts_page {
+    width: 80%;
+    margin: auto;
+}
+
+.btn-create-post {
+    text-align: left;
+    padding: 15px 0 10px 0;
+}
+
+/*PostItem*/
+.post-item {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    border: cadetblue solid 2px;
+    background-color: #61dafb;
+    font-size: 18px;
+    height: 100%;
+}
+
+.post-item-container {
+    padding: 5px 5px 0 5px;
+    margin: auto;
+    display: flex;
+    height: 100%;
+}
+
+.post-item-text {
+    padding-right: 30px;
+}
+
+.post-item-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.post-btns {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+/*PostById*/
+.post-page {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.post-hello-text {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #282c34;
+}
+
+.post-card {
+    padding: 20px;
+}
+
+.bold-style {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.post-title {
+    font-size: 20px;
+}
+
+.post-body {
+    font-size: 20px;
+}
+
+/*FormPost*/
+
+.create-post-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-input-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.post-input-section label {
+    font-size: 20px;
+    font-weight: bold;
+}

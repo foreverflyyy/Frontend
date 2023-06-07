@@ -59,7 +59,6 @@ export default function Posts() {
       </MyButton>
       <MyModal
         visible={modalVisible}
-        setVisible={(value) => setModalVisible(value)}
       >
         <PostForm create={createPost} />
       </MyModal>

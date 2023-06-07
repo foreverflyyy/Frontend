@@ -1,0 +1,26 @@
+.modal-window {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.68);
+}
+
+.modal-content {
+    /*height: 50vh;*/
+    width: 50vw;
+    max-width: 500px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.modal-window.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
