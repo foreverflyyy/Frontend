@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Input from "../../UI/input/Input";
 import {Button} from "../../UI/button/Button";
-import {useCreatePostMutation} from "../../services/Postservice";
+import {useCreatePostMutation} from "../../store/services/PostService";
 import {IPost} from "../../models/IPost";
 
 const FormPost = () => {

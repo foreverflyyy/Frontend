@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate, useParams} from "react-router-dom";
-import {useGetSinglePostQuery} from "../services/Postservice";
+import {useGetSinglePostQuery} from "../store/services/PostService";
 import {Button} from "../UI/button/Button";
 
 const PostById = () => {

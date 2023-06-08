@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PostItem from "./PostItem";
-import {useDeletePostMutation, useGetPostsQuery} from "../../services/Postservice";
+import {useDeletePostMutation, useGetPostsQuery} from "../../store/services/PostService";
 import {IPost} from "../../models/IPost";
 import {useNavigate} from "react-router-dom";
 
