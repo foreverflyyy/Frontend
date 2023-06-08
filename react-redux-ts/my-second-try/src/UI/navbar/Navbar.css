@@ -1,0 +1,48 @@
+.navbar {
+    height: 50px;
+    background-color: #282c34;
+    width: 100vw;
+    color: white;
+    font-size: 20px;
+}
+
+.navbar-container {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+.navbar-pages {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-text {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-links {
+    padding-right: 15px;
+    color: #8d8d8d;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.navbar-links:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-link-out {
+    cursor: pointer;
+}
+
+.navbar-asking {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

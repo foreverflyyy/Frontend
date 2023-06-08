@@ -1,0 +1,77 @@
+{
+  "posts": [
+    {
+      "id": 6,
+      "title": "Json-server",
+      "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut",
+      "author": "foreverFlyy"
+    },
+    {
+      "id": 7,
+      "title": "C#",
+      "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nrnderit molestiae ut ut",
+      "author": "nushakov"
+    },
+    {
+      "id": 8,
+      "title": "json-server",
+      "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nerit molestiae ut ut",
+      "author": "typicode"
+    },
+    {
+      "id": 9,
+      "title": "C#",
+      "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut",
+      "author": "foreverFlyy"
+    },
+    {
+      "id": 10,
+      "title": "c#",
+      "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut",
+      "author": "typicode"
+    },
+    {
+      "id": 12,
+      "title": "json-server",
+      "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut",
+      "author": "typicode"
+    },
+    {
+      "id": 13,
+      "title": "python",
+      "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut",
+      "author": "nushakov"
+    },
+    {
+      "id": 14,
+      "title": "c#",
+      "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut",
+      "author": "foreverFlyy"
+    },
+    {
+      "title": "c#",
+      "body": "hmmm",
+      "id": 15
+    },
+    {
+      "title": "sfvsfvs",
+      "body": "sfvsfv",
+      "id": 16
+    }
+  ],
+  "comments": [],
+  "profile": [
+    {
+      "login": "username",
+      "password": "123"
+    },
+    {
+      "login": "nikita",
+      "password": "123"
+    },
+    {
+      "login": "admin",
+      "password": "123"
+    }
+  ]
+}

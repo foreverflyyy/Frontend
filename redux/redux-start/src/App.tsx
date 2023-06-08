@@ -1,7 +1,4 @@
 import './App.css';
-import {useEffect} from 'react';
-import { useAppDispatch, useAppSelector } from './hooks/redux';
-import { fetchUsers } from './store/reducers/ActionCreators';
 import { PostList } from './components/PostList';
 
 export const App = () =>  {
