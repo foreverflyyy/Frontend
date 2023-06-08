@@ -1,10 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import LoginForm from "../components/LoginForm";
+import {IAuthInfo} from "../models/IAuthInfo";
+import {useActions} from "../store/actions";
+import '../styles/Login.css'
 
 const Login = () => {
+
+    const [authInfo, setAuthInfo] = useState<IAuthInfo>({login: '', password: ''});
+    const {signIn} = useActions();
+
+    const requestSignIn = () => {
+        console.log(`user: ${authInfo.login}, pass: ${authInfo.password}`);
+        signIn();
+    }
+
     return (
         <div>
-            <LoginForm/>
+            <LoginForm authInfo={authInfo} setAuthInfo={setAuthInfo} signIn={requestSignIn}/>
         </div>
     )
 }

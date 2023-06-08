@@ -1,10 +1,10 @@
-import {useState} from 'react'
 import {Route, Routes} from 'react-router-dom'
 import {privateRoutes, publicRoutes} from './routes';
+import {useAppSelector} from "../store/store";
 
 export default function AppRoute() {
 
-    const [isAuth] = useState(true);
+    const {isAuth} = useAppSelector(state => state.auth);
 
     return (
         <Routes>

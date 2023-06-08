@@ -14,11 +14,11 @@ export const authSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {
-        signIn(state, action: PayloadAction<string>) {
+        signIn(state, action: PayloadAction<void>) {
             state.isAuth = true;
             localStorage.setItem(IS_AUTH, 'true');
         },
-        signOut(state, action: PayloadAction<string>) {
+        signOut(state, action: PayloadAction<void>) {
             state.isAuth = false;
             localStorage.removeItem(IS_AUTH);
         }

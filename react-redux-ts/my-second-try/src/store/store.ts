@@ -1,5 +1,5 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {postApi} from "../services/Postservice";
+import {postApi} from "./services/PostService";
 import {TypedUseSelectorHook, useSelector} from "react-redux";
 import {authReducer} from "./slices/authSlice";
 import {setupListeners} from "@reduxjs/toolkit/query";

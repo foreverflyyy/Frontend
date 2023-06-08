@@ -1,12 +1,6 @@
 {
   "posts": [
     {
-      "id": 5,
-      "title": "Python",
-      "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cumnderit molestiae ut ut",
-      "author": "typicode"
-    },
-    {
       "id": 6,
       "title": "Json-server",
       "body": "quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut",
@@ -66,7 +60,18 @@
     }
   ],
   "comments": [],
-  "profile": {
-    "name": "typicode"
-  }
+  "profile": [
+    {
+      "login": "username",
+      "password": "123"
+    },
+    {
+      "login": "nikita",
+      "password": "123"
+    },
+    {
+      "login": "admin",
+      "password": "123"
+    }
+  ]
 }

@@ -35,3 +35,14 @@
     color: white;
     text-decoration: none;
 }
+
+.navbar-link-out {
+    cursor: pointer;
+}
+
+.navbar-asking {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-.authForm {
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-}
-
 .loading-text {
     color: blue;
     margin-top: 20px;
