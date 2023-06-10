@@ -1,11 +1,14 @@
 export interface IUser {
-    id: string;
+    _id: string;
     name: string;
     email: string;
 }
 
 export interface IUserState {
-    user: IUser,
-    isLoading: boolean;
-    error: string;
+    user: IUser | null,
+}
+
+export interface IGenericResponse {
+    status: string;
+    message: string;
 }

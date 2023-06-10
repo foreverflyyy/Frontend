@@ -1,10 +1,10 @@
-import {authActions} from "./slices/authSlice";
 import {useDispatch} from "react-redux";
 import {bindActionCreators} from "redux";
+import {userActions} from "./slices/userSlice";
 
 
 const actions = {
-    ...authActions
+    ...userActions
 }
 
 export const useActions = () => {

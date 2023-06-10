@@ -1,17 +1,17 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import './Navbar.css'
-import {useAppSelector} from "../../store/store";
 import {useActions} from "../../store/actions";
 
 export const Navbar = () => {
 
-    const {isAuth} = useAppSelector(state => state.auth);
-    const {signOut} = useActions();
+    /*const {isAuth} = useAppSelector(state => state.auth);*/
+    const isAuth = false;
+    const {logout} = useActions();
 
     const handlerSignOut = (event: React.MouseEvent) => {
         event.preventDefault();
-        signOut();
+        logout();
     }
 
     return (

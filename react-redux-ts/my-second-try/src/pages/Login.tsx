@@ -7,11 +7,11 @@ import '../styles/Login.css'
 const Login = () => {
 
     const [authInfo, setAuthInfo] = useState<IAuthInfo>({login: '', password: ''});
-    const {signIn} = useActions();
+    const {logout} = useActions();
 
     const requestSignIn = () => {
         console.log(`user: ${authInfo.login}, pass: ${authInfo.password}`);
-        signIn();
+        logout();
     }
 
     return (
