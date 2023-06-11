@@ -1,10 +1,8 @@
 import {IRoute} from "../models/IRoute";
 import Home from '../pages/Home'
-import Login from "../pages/Authorization/Login";
 import Posts from "../pages/Post/Posts";
 import Todo from "../pages/Todo";
 import PostById from "../pages/Post/PostById";
-import Register from "../pages/Authorization/Register";
 import Unauthorize from "../pages/Unauthorize";
 import Profile from "../pages/Profile";
 import AdminProfile from "../pages/AdminProfile";
@@ -22,7 +20,5 @@ export const privateRoutes: IRoute[] = [
 
 export const publicRoutes: IRoute[] = [
     {path: '/', component: Unauthorize},
-    {path: '/login', component: Login},
-    {path: '/register', component: Register},
-    {path: '/*', component: Login},
+    {path: '/*', component: Unauthorize},
 ];

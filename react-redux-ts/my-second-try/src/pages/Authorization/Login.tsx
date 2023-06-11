@@ -42,7 +42,7 @@ const loginSchema = object({
 
 export type LoginInput = TypeOf<typeof loginSchema>;
 
-const Login = () => {
+export const LoginPage = () => {
     const methods = useForm<LoginInput>({
         resolver: zodResolver(loginSchema),
     });
@@ -173,5 +173,3 @@ const Login = () => {
         </Container>
     );
 };
-
-export default Login;

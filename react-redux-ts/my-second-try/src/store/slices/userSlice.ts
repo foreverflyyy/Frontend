@@ -1,8 +1,15 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IUser, IUserState} from "../../models/IUser";
 
+const defaultValueUser: IUser = {
+    name: 'Nikita',
+    email: 'nikita@mail',
+    _id: '123123',
+    role: 'admin'
+}
+
 const initialState: IUserState = {
-    user: null,
+    user: defaultValueUser,
 }
 
 export const userSlice = createSlice({

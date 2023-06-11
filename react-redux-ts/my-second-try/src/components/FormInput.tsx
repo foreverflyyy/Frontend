@@ -4,13 +4,13 @@ import {FC} from 'react';
 import {Controller, useFormContext} from 'react-hook-form';
 
 const Input = styled(_Input)`
-    background-color: white;
-    padding: 0.4rem 0.7rem;
+  background-color: white;
+  padding: 0.4rem 0.7rem;
 `;
 
 type IFormInputProps = {
-    name: string,
-    label: string
+    name: string;
+    label: string;
 } & InputProps;
 
 const FormInput: FC<IFormInputProps> = ({name, label, ...otherProps}) => {
@@ -40,12 +40,11 @@ const FormInput: FC<IFormInputProps> = ({name, label, ...otherProps}) => {
                         error={!!errors[name]}
                         {...otherProps}
                     />
-                    <FormHelperText error={!!errors[name]}>
-                        {errors[name]
-                            ? <div>errors[name].message</div>
-                            : <div></div>
-                        }
-                    </FormHelperText>
+                    {errors[name] &&
+                        <FormHelperText error={!!errors[name]}>
+                            errors[name].message
+                        </FormHelperText>
+                    }
                 </FormControl>
             )}
         />

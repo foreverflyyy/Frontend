@@ -1,4 +1,4 @@
-import {useCookies} from "react-cookie/index";
+import {useCookies} from "react-cookie";
 import {Navigate, Outlet, useLocation} from "react-router-dom";
 import {userApi} from "../store/services/userApi";
 import FullScreenLoader from "./FullScreenLoader";

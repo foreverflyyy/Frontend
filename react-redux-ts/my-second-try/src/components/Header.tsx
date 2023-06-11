@@ -1,11 +1,11 @@
-import {LoadingButton as _LoadingButton} from '@mui/lab';
 import {styled} from '@mui/material/styles';
 import {useNavigate} from "react-router-dom";
 import {useAppSelector} from "../store/store";
 import {useLogoutUserMutation} from "../store/services/authApi";
 import {useEffect} from "react";
 import {toast} from "react-toastify";
-import {AppBar, Avatar, Box, Container, IconButton, Toolbar, Tooltip, Typography} from '@mui/material';
+import {AppBar, Avatar, Box, Container, IconButton, Toolbar, Tooltip, Typography} from '@mui/material'
+import {LoadingButton as _LoadingButton} from '@mui/lab';
 
 const LoadingButton = styled(_LoadingButton)`
   padding: 0.4rem;
@@ -24,7 +24,9 @@ const Header = () => {
     const navigate = useNavigate();
     const user = useAppSelector(state => state.user.user);
 
-    const [logoutUser, {isLoading, isError, isSuccess, error}] = useLogoutUserMutation();
+    const [logoutUser,
+        {isLoading, isError, isSuccess, error}
+    ] = useLogoutUserMutation();
 
     useEffect(() => {
         if (isSuccess) {
@@ -60,7 +62,7 @@ const Header = () => {
                         onClick={() => navigate('/')}
                         sx={{cursor: 'pointer'}}
                     >
-                        CodevoWeb
+                        React app
                     </Typography>
                     <Box display='flex' sx={{ml: 'auto'}}>
                         {!user && (
@@ -77,19 +79,12 @@ const Header = () => {
                             </>
                         )}
                         {user && (
-                            <LoadingButton
-                                sx={{backgroundColor: '#eee'}}
-                                onClick={onLogoutHandler}
-                                loading={isLoading}
-                            >
+                            <LoadingButton onClick={onLogoutHandler}>
                                 Logout
                             </LoadingButton>
                         )}
                         {user && user?.role === 'admin' && (
-                            <LoadingButton
-                                sx={{backgroundColor: '#eee', ml: 2}}
-                                onClick={() => navigate('/admin')}
-                            >
+                            <LoadingButton onClick={() => navigate('/admin')}>
                                 Admin
                             </LoadingButton>
                         )}
