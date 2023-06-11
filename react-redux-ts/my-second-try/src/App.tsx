@@ -4,9 +4,12 @@ import AppRoute from './router/AppRoute';
 import {Navbar} from "./UI/navbar/Navbar";
 
 function App() {
+
+    const isAuth = false;
+
     return (
         <div className="App">
-            <Navbar/>
+            {isAuth ?? <Navbar/>}
             <AppRoute/>
         </div>
     );

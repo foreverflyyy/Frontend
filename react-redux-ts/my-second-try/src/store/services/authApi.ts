@@ -1,7 +1,7 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 import {IGenericResponse} from "../../models/IUser";
-import {Register} from "../../pages/Register";
-import Login from "../../pages/Login";
+import {RegisterInput} from "../../pages/Authorization/Register";
+import {LoginInput} from "../../pages/Authorization/Login";
 import {userApi} from "./userApi";
 
 /*const BASE_URL = process.env.REACT_APP_SERVER_ENDPOINT as string;*/
@@ -14,7 +14,7 @@ export const authApi = createApi({
     }),
     endpoints: builder => ({
         // Делает запрос POST с RTK Query для регистрации пользователя
-        registerUser: builder.mutation<IGenericResponse, Register>({
+        registerUser: builder.mutation<IGenericResponse, RegisterInput>({
             query(data) {
                 return {
                     url: 'register',
@@ -26,7 +26,7 @@ export const authApi = createApi({
         // POST с помощью RTK Query для входа зарегистрированного пользователя.
         loginUser: builder.mutation<
             { access_token: string; status: string },
-            Login
+            LoginInput
         >({
             query(data) {
                 return {

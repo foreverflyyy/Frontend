@@ -1,6 +1,6 @@
 import {Box, Container, Typography} from '@mui/material';
 
-const HomePage = () => {
+const Unauthorize = () => {
     return (
         <Container maxWidth='lg'>
             <Box
@@ -18,11 +18,11 @@ const HomePage = () => {
                     component='h1'
                     sx={{color: '#1f1e1e', fontWeight: 500}}
                 >
-                    Home Page
+                    Unauthorized Page
                 </Typography>
             </Box>
         </Container>
     );
 };
 
-export default HomePage;
+export default Unauthorize;

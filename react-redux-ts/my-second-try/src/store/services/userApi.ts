@@ -1,6 +1,6 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 import {IUser} from "../../models/IUser";
 import {setUser} from "../slices/userSlice";
+import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 
 //const BASE_URL = process.env.REACT_APP_SERVER_ENDPOINT as string;
 const BASE_URL = 'http://localhost:5000';
@@ -13,8 +13,8 @@ export const userApi = createApi({
     tagTypes: ['User'],
     endpoints: builder => ({
         // запрос GET с файлами cookie, которые мы сохранили в браузере, на сервер в обмен на информацию о пользователе
-        getMe: builder.mutation<IUser, null>({
-            query(data) {
+        getMe: builder.query<IUser, null>({
+            query() {
                 return {
                     url: 'me',
                     credentials: 'include',

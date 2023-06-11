@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import PostList from "../components/posts/PostList";
-import FormPost from "../components/posts/FormPost";
-import '../styles/Posts.css'
-import Modal from "../UI/modal/Modal";
-import {Button} from "../UI/button/Button";
+import PostList from "../../components/posts/PostList";
+import FormPost from "../../components/posts/FormPost";
+import '../../styles/Posts.css'
+import Modal from "../../UI/modal/Modal";
+import {Button} from "../../UI/button/Button";
 
 const Posts = () => {
 

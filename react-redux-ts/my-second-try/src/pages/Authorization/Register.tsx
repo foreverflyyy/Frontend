@@ -3,10 +3,10 @@ import {styled} from '@mui/material/styles';
 import {FormProvider, SubmitHandler, useForm} from 'react-hook-form';
 import {object, string, TypeOf} from 'zod';
 import {zodResolver} from '@hookform/resolvers/zod';
-import FormInput from '../components/FormInput';
+import FormInput from '../../components/FormInput';
 import {useEffect} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-import {useRegisterUserMutation} from '../store/services/authApi';
+import {useRegisterUserMutation} from '../../store/services/authApi';
 import {LoadingButton as _LoadingButton} from '@mui/lab';
 import {toast} from 'react-toastify';
 
@@ -47,7 +47,7 @@ const registerSchema = object({
 
 export type RegisterInput = TypeOf<typeof registerSchema>;
 
-const RegisterPage = () => {
+const Register = () => {
     const methods = useForm<RegisterInput>({
         resolver: zodResolver(registerSchema),
     });
@@ -186,4 +186,4 @@ const RegisterPage = () => {
     );
 };
 
-export default RegisterPage;
+export default Register;
