@@ -1,9 +1,8 @@
-import {redirect} from "next/navigation";
 import {NextResponse} from "next/server";
 import {cookies, headers} from "next/headers";
 
 
-export async function POST(req: Request, {params}: {params: {id: string}}){
+export async function POST(req: Request, {params}: { params: { id: string } }) {
     const id = params.id;
 
     // redirect('/authorization')
