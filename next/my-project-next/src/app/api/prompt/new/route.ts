@@ -16,6 +16,6 @@ export const POST = async (req: Request) => {
         await newPrompt.save();
         return new Response(JSON.stringify(newPrompt), {status: 201})
     } catch(e: any) {
-        return new Response("Something happened wroong", {status: 500});
+        return new Response("Something happened wrong", {status: 500});
     }
 }

@@ -12,7 +12,7 @@ const CreatePrompt = () => {
     const {data: session} = useSession();
 
     const [submitting, setSubmitting] = useState(false);
-    const [post, setPost] = useState<IPost>({
+    const [post, setPost ] = useState<IPost>({
         prompt: '',
         tag: ''
     });
