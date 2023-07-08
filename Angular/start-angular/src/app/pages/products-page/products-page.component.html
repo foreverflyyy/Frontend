@@ -1,0 +1,32 @@
+<h1>Hello everyone! {{ title }}</h1>
+
+<app-global-error></app-global-error>
+
+<p *ngIf="loading" class="text-center text-lg">Loading...</p>
+
+<input
+  class="w-full border rounded px-4 py-2"
+  [(ngModel)]="term"
+>
+
+<button
+  class="rounded px-3 py-1 bg-blue-500 text-white my-5"
+  (click)="modalService.open()"
+>
+  Create new Post
+</button>
+
+<div
+  *ngIf="products$ | async as products"
+  class="flex flex-col items-center mt-10"
+>
+  <app-person
+    *ngFor="let product of products | filterProducts: term"
+    [product]="product"
+  >
+  </app-person>
+</div>
+
+<app-modal *ngIf="modalService.isVisible$ | async" title="Create new product">
+  <app-create-product></app-create-product>
+</app-modal>

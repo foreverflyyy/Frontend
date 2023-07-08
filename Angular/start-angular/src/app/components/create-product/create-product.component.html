@@ -1,0 +1,21 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input
+    type="text"
+    class="w-full border rounded py-1 px-4 my-5"
+    formControlName="title"
+    appFocus
+  >
+
+  <div
+    class="text-red-600 font-medium mb-2"
+    *ngIf="title.errors?.minLength && title.touched"
+  >
+    Min length 4 symbols
+  </div>
+
+  <button
+    class="p-2 bg-blue-500 text-white rounded"
+  >
+    Create new Product
+  </button>
+</form>

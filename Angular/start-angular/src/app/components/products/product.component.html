@@ -1,2 +1,19 @@
-<h2>Hello you!</h2>
-<div>Your product: {{ product.title }}}</div>
+<div class="py-4 px-6 border rounded-lg flex items-center flex-col">
+  <div>Your product: {{ product.title }}</div>
+  <img [src]="product.image" alt="product" class="w-1/6" />
+  <span>Price: {{ product.price }}</span>
+  <div *ngIf="showDetails">
+    <div>{{ product.description }}</div>
+    <div>{{ product.rating.rate }}</div>
+  </div>
+  <button
+    class="border rounded p-2"
+    (click)="showDetails = !showDetails"
+    [ngClass]="{
+      'bg-yellow-400': !showDetails,
+      'bg-blue-400': showDetails
+    }"
+  >
+    {{ showDetails ? "Hide" : "Show Details" }}
+  </button>
+</div>

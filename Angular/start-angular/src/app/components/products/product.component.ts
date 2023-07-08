@@ -8,4 +8,5 @@ import { IProduct } from "src/app/models/product";
 export class ProductComponent{
    title: "Example"
    @Input() product: IProduct
+   showDetails: boolean = false
 }
